@@ -1,0 +1,390 @@
+<!doctype html>
+<!--[if gt IE 9]><!--> <html lang="zh-tw" class="no-js"> <!--<![endif]-->
+<!--[if !IE]><!--><script>
+    if (/*@cc_on!@*/false) {document.documentElement.className+=' ie10';}
+</script><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KKTIX</title>
+        <script src="https://t.kfs.io/assets/pace.min-382466868610a413a53ffb0fec976abd.js" debug="false"></script>
+<script src="https://t.kfs.io/assets/shared/meta_tag-46ca21488c1a6a5cf7dcc9fc71b84e7b.js" debug="false"></script>
+        <script>
+          (function(){
+            var event_slug = location.pathname.match(/\/\events\/(.*?)\//)[1]
+            var meta = new MetaTag({name: 'apple-itunes-app', content: 'app-id=780240742, app-argument=/events/' + event_slug });
+            meta.render();
+          })();
+        </script>
+        <link rel="stylesheet" media="screen, projection" href="https://t.kfs.io/assets/tng-registrations-a1fd72ca973df30d7ca4629636ff1304.css" />
+        <link rel="stylesheet" media="print" href="https://t.kfs.io/assets/tng-registrations-print-8431df8ce7a6dead7f857b460b19ccfa.css" debug="false" />
+        <link rel="stylesheet" media="screen, projection" href="https://t.kfs.io/assets/tng-seat-cd997edededef238932ba28504a05dfe.css" />
+        
+        <!-- Rollbar setting start -->
+<script>
+  // Antidote for 3rd party script issues
+  window.__gCrWeb = window.__gCrWeb || {};
+  window.__gCrWeb.autofill = window.__gCrWeb.autofill || {};
+  window.__gCrWeb.autofill.extractForms = window.__gCrWeb.autofill.extractForms || function() {};
+  window.__gCrWeb.innerSizeAsString = window.__gCrWeb.innerSizeAsString || function() {};
+  window.__gCrWeb.getElementFromPoint = window.__gCrWeb.getElementFromPoint || function() {};
+  window.bds = window.bds || {};
+
+  // Rollbar settings
+  var _whiteListDomainRegEx = new RegExp("^(https://kktix.com)");
+  var _rollbarConfig = {
+    accessToken: "e1092f49332d491d8a863ad651898e87",
+    captureUncaught: true,
+    enabled: true,
+    hostWhiteList: ['kktix.com', 'https://t.kfs.io'],
+    scrubFields: ['cardNumber'],
+    payload: {
+      environment: "production"
+    },
+    checkIgnore: function(isUncaught, args, payload) {
+      // ignore request except host and assets host
+      // args is possibly undefined
+      if ((url = payload.request.url) != null) {
+      // Ignore report if doesn't match whitelist domain
+        return !url.match(_whiteListDomainRegEx)
+      }
+      return false;
+    }
+  };
+</script>
+<script src="https://t.kfs.io/assets/rollbar-26377b42bd9cf92ede383dc95acf936a.js"></script>
+<!-- Rollbar setting end -->
+
+        <!--[if lte IE 9]>
+<script>
+    location.href = "/ie";
+</script>
+<![endif]-->
+
+        <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="KtqVfkn2rlQrjOp34zncnXpQhV2S6fT+mvoNtHW0nWYrY2BrbhJIcZjKPAWr8n2u80+jeyXX0a3OtH0jKmmJ/Q==" />
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <div class="page no-sidebar registration tng-registration">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 class="logo">
+                <a href="/">KKTIX</a>
+            </h1>
+            <div class="hide pr-logo" hidden>
+                <img src="https://t.kfs.io/assets/logo_s-2827b98dd76877fbba09304664ffeeda.png" alt="Logo s" />
+            </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav hidden show-nav-menu">
+                <li class="user-signed-in hidden">
+                    <a href="/dashboard/overview">我的票券</a>
+                </li>
+                <li><a href="/events">探索活動</a></li>
+                <li>
+                    <form url="https://kktix.cc/events" class="navbar-form navbar-left" action="/events" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                        <div class="form-group">
+                            <input type="text" name="search" id="search" placeholder="搜尋活動" class="form-control" />
+                            <input type="hidden" name="start_at" id="start_at" value="2019/01/04" />
+                            <i class="fa fa-search"></i>
+                        </div>
+</form>                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="not-signed-in hidden"><a href="/users/sign_up?back_to=https%3A%2F%2Fkktix.com%2Fevents%2Fstatic%2Fregistrations%2Fnew">註冊</a></li>
+                <li class="not-signed-in hidden"><a href="/users/sign_in?back_to=https%3A%2F%2Fkktix.com%2Fevents%2Fstatic%2Fregistrations%2Fnew">登入</a></li>
+                <li class="new-event user-signed-in hidden show-nav-menu">
+                    <a href="https://kktix.com/dashboard/events/new">建立活動<i aria-hidden="true" class="fa fa-plus-circle"></i></a>
+                </li>
+                <li class="dropdown user-signed-in hidden show-nav-menu" id="nav-org-dropdown-id">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">選擇組織 <i class="caret"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">組織列表</li>
+                        <li id="nav-org-dropdown-menu-id">Loading...</li>
+                        <li class="divider"></li>
+                        <li><a href="/dashboard/organizations/new"><i class="fa fa-plus-circle"></i> 建立新組織</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-block user-signed-in hidden"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="nav-user-display-id" class="user-display-name"></span><i class="fa fa-user"></i> <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a id="nav-user-path">
+                                <img id="nav-user-avatar" alt="avatar" src="" class="img-circle user-icon" />
+                                <span id="nav-user-link-id" class="user-text"></span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="https://kktix.com/users/edit"><i class="fa fa-cog"></i>設定</a></li>
+                        <li><a href="https://kktix.com/account/orders"><i class="fa fa-money"></i>訂單</a></li>
+                        <li><a rel="nofollow" data-method="delete" href="/users/sign_out"><i class="fa fa-sign-out"></i>登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+            <div class="hide register-status register-status-CLOSED">
+    <div class="alert-wrapper alert-info align-center">
+        <div class="alert">
+            活動已結束
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="narrow-wrapper">
+        <div class="form-actions plain indent">
+            <a href="#" class="replace_to_event_url btn btn-default">回到活動頁面</a>
+                <a href="https://kktix.com/events" class="btn btn-default">探索活動</a>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<!-- <div class="hide register-status register-status-COMING_SOON">
+    <div class="alert-wrapper alert-warning align-center">
+        <div class="alert">
+          票券尚未開賣，請參考<a class="replace_to_event_url" href="#">活動網址</a>查閱販售時間。
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="narrow-wrapper">
+        <div class="form-actions plain indent">
+            <a href="#" class="replace_to_event_url btn btn-default">回到活動頁面</a>
+                <a href="https://kktix.com/events" class="btn btn-default">探索活動</a>
+        </div>
+    </div>
+</div>
+
+
+</div> -->
+
+<div class="hide register-status register-status-REGISTRATION_CLOSED">
+    <div class="main-wrapper">
+        <div class="alert-wrapper alert-warning align-center">
+            <div class="alert">
+                本活動已截止報名，謝謝您的支持
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="narrow-wrapper">
+        <div class="form-actions plain indent">
+            <a href="#" class="replace_to_event_url btn btn-default">回到活動頁面</a>
+                <a href="https://kktix.com/events" class="btn btn-default">探索活動</a>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="hide register-status register-status-OUT_OF_STOCK">
+    <div class="alert-wrapper alert-warning align-center">
+        <div class="alert">
+            目前沒有任何可以購買的票券
+        </div>
+    </div>
+    <div class="content-wrapper">
+    <div class="narrow-wrapper">
+        <div class="form-actions plain indent">
+            <a href="#" class="replace_to_event_url btn btn-default">回到活動頁面</a>
+                <a href="https://kktix.com/events" class="btn btn-default">探索活動</a>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<div class="hide register-status register-status-IN_STOCK register-status-SOLD_OUT register-status-COMING_SOON" >
+    <div id="registrationsNewApp" class="hide main-wrapper clearfix">
+        <div ng-controller="RegistrationsNewCtrl" class="content-wrapper">
+            <div ng-include="'registrations/guest_modal.html'"></div>
+            <div ng-include="'registrations/event_info.html'" ng-controller="EventInfoCtrl"></div>
+
+            <div ng-if="showProgress" class="narrow-wrapper step-bar-wrapper" ng-controller="ProgressCtrl">
+                <div ng-include="'registrations/progress.html'" class="step-bar">
+                </div>
+            </div>
+
+            <div ng-controller="CasualMessageCtrl">
+                <div ng-repeat="(key, msg) in msgs" class="alert-wrapper align-center" ng-class="[msg.style]">
+                    <div class="alert">
+                        <span ng-bind-html="msg.content"></span>
+                        <button ng-click="remove(msg.key)" type="button" class="close">×</button>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-if="showContent" ng-controller="ContentCtrl" class="narrow-wrapper">
+                <div ng-if="hasArena()" arenas-map></div>
+                <div class="ticket-list-wrapper" ng-include="'registrations/tickets.html'" ng-controller="TicketsListCtrl" ng-class="{'with-seat': hasArena(), 'with-fee': chargeBookingFee}"></div>
+                <div class="captcha" ng-include="'registrations/captcha.html'" ng-controller="CaptchaCtrl"></div>
+                <div class="control-group" ng-show="anyPurchasable()">
+                    <label for="person_agree_terms" class="checkbox-inline">
+                        <input id="person_agree_terms" type="checkbox" value="agree"
+                        ng-model="conditions.agreeTerm">
+                        {{'new.i_read_and_agree_to' | translate}}
+                        <a ng-href="{{termsLink}}" target="_blank">
+                            {{'new.terms_of_service' | translate}}
+                        </a> {{'new.and' | translate}}
+                        <a ng-href="{{policyLink}}" target="_blank">
+                            {{'new.privacy_policy' | translate}}
+                        </a>
+                        <span ng-if="showAgreeReceipt()">{{'new.i_agree_receipt' | translate}}</span>
+                    </label>
+                </div>
+                <div class="form-actions plain align-center" ng-show="anyPurchasable()">
+                    <button class="btn btn-primary btn-lg"
+                        style="text-overflow:ellipsis; overflow: hidden;"
+                        kk-busy-spinner="busy"
+                        ng-disabled="busy || !couldNextStep()"
+                        ng-class="{'btn-primary': couldNextStep(), 'btn-disabled-alt': !couldNextStep()}"
+                        ng-click='challenge()'>
+                        <span ng-if="!busy">{{'new.next_step' | translate}}</span>
+                        <span ng-if="busy">{{'new.enqueue_warning_text' | translate}}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type='file' class="hide">
+
+
+        </div>
+        <footer class="footer registration">
+    <div class="service">
+        <div class="container clearfix">
+            <div class="language">
+                Language
+                <a class="current" href="?locale=zh-TW">繁體中文</a>
+                <a href="?locale=en">English</a>
+                <a href="?locale=ja">日本語</a>
+            </div>
+            <ul class="links">
+                <li><a href="/pricing">定價方式</a></li>
+                <li><a href="/user_guide_index">購票流程說明</a></li>
+                <li><a href="/apps">下載 App</a></li>
+                <li><a href="/terms">服務條款</a></li>
+                <li><a href="/policy">隱私權政策</a></li>
+                <li><a href="/contact">聯絡我們</a></li>
+                <li><a href="https://jobs.kktix.cc/">加入我們</a></li>
+                <li><a href="https://twitter.com/kktix">Twitter</a></li>
+                <li><a href="http://blog.kktix.com/">部落格</a></li>
+                <li><a href="http://support.kktix.com/">常見問題</a></li>
+            </ul>
+        </div>
+        <div class="container"><address>華娛網路娛樂股份有限公司 WALKING INTERNET ENTERTAINMENT LIMITED</address></div>
+    </div>
+</footer>
+
+
+        <script src="https://t.kfs.io/assets/registrations-31e2597acdbe902c3cedce0d457d9048.js" debug="false"></script>
+        <script type="text/javascript">
+    _atrk_opts = { atrk_acct:"bYP4i1acVE00wd", domain:"kktix.com",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=bYP4i1acVE00wd" style="display:none" height="1" width="1" alt="" /></noscript>
+
+        <script>
+  dataLayer = [];
+
+  if (document.cookie.match(/_ga=(GA[0-9.]+)(;|$)/)) {
+    (new Image).src = "//kktix.cc/ga?ga=" + document.cookie.match(/_ga=(GA[0-9.]+)(;|$)/)[1];
+  }
+
+
+
+  if ($.kkUser && $.kkUser.path) {
+    dataLayer.push({ 'user_id': $.kkUser.path.split("/user/")[1] });
+  }
+</script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NX8MWQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NX8MWQ');</script>
+
+
+         
+            <script>
+      if (!$.kkUser) {
+        $.kkUser = {};
+      }
+      var TIXGLOBAL;
+      TIXGLOBAL = {
+        page_title: " 報名",
+        queueApi: {
+          host: "queue.kktix.com",
+          retry_timeout: "1000",
+          fallback_exponent: [500, 1000, 2000, 4000, 6000], // WARNING: fallback_exponent MUST set two integer values greater than 16
+          enable: true
+        },
+        casualMsgs: {
+          messages: window._flash_message
+        },
+        pageInfo: {
+          'recaptchaSiteKey': '6LdEpQ0UAAAAANyAXOlqzxx5CsxjDLtfI3IHYuEE',
+          'managerLink': 'http://support.kktix.com', // 客服連結
+          'discoverUrl': 'https://kktix.com/events',  // 探索活動
+        },
+        timezone: {
+          userTimezone: $.kkUser.timezone || "Asia/Taipei",
+        },
+        translation: {"territory":{"HK":"香港","JP":"日本","MY":"馬來西亞","SG":"新加坡","TH":"泰國","TW":"台灣"},"create":{"event_not_open_for_registration":"活動尚未開放報名","you_need_to_agree_terms_and_policy":"您必須閱讀並同意授權條款與隱私權政策","captcha_code_error":"驗證碼錯誤","please_choose_ticket":"請選擇票種","refund_policy_changed":"主辦單位更新了退款政策, 請重整頁面來取得最新的退款政策"},"update":{"order_is_outdated":"訂單已過期"},"show":{"order_is_outdated":"訂單已過期"},"booking":{"btn_confirm":"確認","btn_cancel":"取消","btn_delete":"刪除","enter_section":"進入此區","mobile_device_autoseat_hint":"您使用的是行動裝置，系統將自動為您選擇最好的位置；如欲自行選位，請使用電腦訪問 kktix.com 購票","system_booking_notification":"系統選位通知","you_can_modify_order_in":"系統已經幫您選好了連號座位，您有 {{ttl}} 分鐘可以修改您想要的位置：","yes_i_know_time_left_ttl":"知道了（選位時間剩下{{ttl}}）","section_picked":"，已選 {{picked}} 張票","available_tickets":"適用票種","cant_add_this_one":"不開放加購","cant_add_this_one_here_go_back":"目前無法於座位圖區加購此類票種，請回上一步驟購買。","unpurchasable":"無法購買","upper_limit":"已達購票數上限","buy_more":"購買","arena_map":"票區圖","arena":"場館","seat_aerial_view":"全座位圖","you_still_have":"您還有","to_choose_seat":"可以選擇座位","instruction":"操作說明","confirm_reservation":"確認座位","timeout_remind_mobile_prefix":"時間剩餘","timeout_remind_mobile_suffix":"","stage_title":"{{area}} 區","stage_direction":"舞台方向","seat_state":{"choosed":"已選","available":"可選","unavailable":"不可選"},"move_attendee_from":"您正在更改座位：從","move_attendee_to":"到","move_attendee_end":"","confirmed_my_choose":"完成選位","my_tickets":"選購的票券","i_dont_want_this_ticket":"刪除座位","ticket_cant_assign_to_this_seat":"無法更換座位, 新座位適用的票種與原座位不符","ticket_cant_buy_the_seat":"無法更換座位, 新座位已售出","cant_delete_all_tickets":"不可刪除訂單中所有的票券","cant_delete_tickets_wrong_quantity":"因為刪除的數量有誤, 無法刪除票券","delete_multiple_tickets_reason":{"min_to_buy_condition":"因為票種最小購票數為{{count}}張","unit_to_buy_condition":"因為票種需要一次購買{{count}}張"},"delete_ticket_confirm_message":"請確認是否刪除下列座位","change_seat_mobile_dialog_title":"更換座位","change_seat_mobile_step_1_msg":"目前的座位為：{{label}}，請點擊想更換的座位。","change_seat_mobile_step_2_msg_1":"目前的座位為：{{label}}","change_seat_mobile_step_2_msg_2":"欲更換的座位為：{{label}}","seat_tip_web_modal_title":"座位圖使用說明","seat_tip_web_modal_1":"基本操作","seat_tip_web_modal_1_1":"座位圖操作方式如下：","seat_tip_web_modal_1_1_1":"座位圖的左上角有 {{icon1}} 及 {{icon2}} 圖示，點選 {{icon3}} 圖示可放大座位圖；點選 {{icon4}} 圖示可縮小座位圖。","seat_tip_web_modal_1_1_2":"將滑鼠移至座位圖中沒有座位的空白區域，可看見滑鼠指標變更為十字形，此時可拉動座位圖調整顯示範圍。","seat_tip_web_modal_2":"換位說明","seat_tip_web_modal_2_1":"若想變更已選定的座位，可依下列步驟進行換位：","seat_tip_web_modal_2_1_1":"點選目前已選但想更換的座位，將會看見「您正在更改座位」的提示訊息。","seat_tip_web_modal_2_1_2":"將滑鼠移至想更換的目標座位上，可從提示訊息中看見該位置的排號。","seat_tip_web_modal_2_1_3":"若確認無誤，點擊該座位即完成換位。","seat_tip_web_screenshot_1":"change_seat_1_zh-TW.jpg","seat_tip_web_screenshot_2":"change_seat_2_zh-TW.jpg","seat_tip_web_screenshot_3":"change_seat_3_zh-TW.jpg","seat_tip_web_got_it":"知道了","seat_tip_mobile_modal_title":"座位圖使用說明","seat_tip_mobile_modal_1":"基本操作","seat_tip_mobile_modal_1_1":"座位圖操作方式如下：","seat_tip_mobile_modal_1_1_1":"在座位圖中，您可使用兩指縮放的手勢放大或縮小座位圖。","seat_tip_mobile_modal_1_1_2":"將手指按住座位圖進行拖移便可調整整張座位圖的顯示範圍。","seat_tip_mobile_modal_2":"換位說明","seat_tip_mobile_modal_2_1":"若想變更已選定的座位，可依下列步驟進行換位：","seat_tip_mobile_modal_2_1_1":"點選目前已選但想更換的座位，將會看見「您正在更改座位」的提示訊息。","seat_tip_mobile_modal_2_1_2":"點選想更換的目標座位，即可看見提示訊息中列出欲更換的座位及目標。若座位資訊無誤，點擊「確認」即進行換位","seat_tip_mobile_modal_ttl_prefix":"知道了（時間剩餘","seat_tip_mobile_modal_ttl_suffix":"）"},"error":{"forbidden":"無法讀取訂單, 請確認登入的帳號與當初購票的帳號相同","system_is_busy":"流量管制中，請稍後再試。","pls_retry_later":"發生錯誤，請稍候再試。","buyer_titile_include_special_char":"發票抬頭包含特殊字元"},"cancel":{"cancel_order":"取消訂單","do_not_cancel_order":"不用取消訂單","leave_message_to_organization":"留言給主辦單位","msg_confirm_cancel_order":"確定取消？","submit_and_cancel_order":"送出並取消訂單"},"event_info":{"start_time":"開始時間","event_time":"活動時間","event_location":"活動地點","event_host":"主辦單位","event_sub_host":"協辦單位","ticket_types":"票券種類","payment_terms":"付款方式","refund_policy":"退款政策","notices":"注意事項","benefits":"購票福利","btn_add_to_calendar":"加入行事曆","btn_event_page":"活動頁面","btn_view_map":"檢視地圖"},"fallback_actions":{"btn_back_to_event_page":"回到活動頁面","btn_discover_events":"探索活動"},"event_ktx_captcha_title":"請回答下列問題","new":{"enqueue_unload_alert":"離開本頁重新進入，則需重頭開始查詢空位，確定要離開？","enqueue_warning_text":"查詢空位中，請勿重新讀取或關閉此頁","alert_agree_term":"您必須閱讀並同意授權條款與隱私權政策才能報名","alert_chosen_nothing":"您尚未選取任何票券","and":"與","btn_back_to_event_page":"回到活動頁面","event_closed":"活動已結束","event_closed_short_message":"活動已結束","event_coming_soon_html":"票券尚未開賣，請參考%{href}查閱販售時間。","event_coming_soon":"尚未開放報名","event_coming_soon_for_sale":"尚未開放購票","event_out_of_stock":"目前沒有任何可以購買的票券","event_registration_closed":"本活動已截止報名，謝謝您的支持","event_registration_closed_short_message":"本活動已截止報名","event_sold_out":"本活動已額滿，謝謝您的支持","event_sold_out_short_message":"本活動已額滿","i_read_and_agree_to":"我已經閱讀並同意","i_agree_receipt":"。若後續辦理退票作業，KKTIX 得代您處理法令要求之相關單據 (如發票或折讓單等)。","login_dialog_btn_abort":"暫時不要","login_dialog_btn_sign_up":"立即成為會員","login_dialog_btn_sign_in":"登入","login_dialog_desc_1":"立刻成為 KKTIX 會員，加速活動報名流程，並且讓您的資料更有保障。","login_dialog_desc_2":"您也可以先報名活動，日後再註冊帳號。系統會在認證您的 EMail 後，協助您找回舊的訂單。","login_dialog_title":"立刻成為 KKTIX 會員","msg_not_support_browser":"網站不支援您的瀏覽器，可能無法順利報名","next_step":"下一步","payment_method_ibon":"ibon","payment_method_qrcode":"電子票券","payment_methods":"付款方式","pick_up_methods":"取票方式","pls_choose_payment_method":"請選擇付款方式","pls_choose_pickup_method":"請選擇取票方式","please_enter_recaptcha_code":"請輸入驗證碼","privacy_policy":"隱私權政策","purchase_notice":"注意事項","purchase_notice_max_to_buy":"每筆訂單限購 {{count}} 張票","purchase_notice_max_to_buy_per_user":"每個會員限購 {{count}} 張票","terms_of_service":"授權條款","need_qualifications":"本票券需要符合以下任一資格才可以購買：","ktx_captcha_fill_in_answer":"請填入答案","ktx_captcha_wrong_answer":"答案錯誤，再試一次！"},"new_for_collection_event":{"the_collection_has_events":"本系列活動有 %{sub_events_count} 場可以選擇：","date_filter":"限定日期","venue_filter":"限定地點","any":"不限定","purchase":"購票"},"select_an_event":"請選擇活動場次","registrations":{"show_event_details":"顯示活動詳細資料","hide_event_details":"隱藏活動詳細資料","show_order_details":"顯示訂單詳細資料","hide_order_details":"隱藏訂單詳細資料","account_name":"帳戶名稱","alert_invalid_credit_card_number":"您的卡號可能有誤，請再次確認","alert_leaving_pending_order_hint":"若您離開此頁面，我們將取消為您保留的票券","alert_nonexistent_order":"訂單不存在","alert_payment_method_changed":"您已經將付款方式改為 「{{paymentType}}」，請在 {{lastPaymentTime}} 前完成繳費","alert_payment_method_expires_at_will_be":"重選付款方式會修改繳費期限，請在 {{lastPaymentTime}} 前完成繳費。請問您確定要重選嗎？","alert_unknown_credit_card_number":"無法辨識或不支援的卡號","amount":"金額","apply":"套用","atm":"ATM 虛擬帳號","back_to_event_page":"回活動頁面","bank_account":"銀行帳號","bank_code":"銀行代碼","branch_name":"分行名稱","atm_special_due_date_info":"系統以款項實際入帳時間為準，繳費期限前未入帳者訂單皆一律取消。因為各家銀行轉帳入帳時間不同，為保障您的權益，請及早付款。","payment_due_date":"繳款期限","booking":"劃位","btn_choose_another_method":"選擇其他取票方式","btn_edit_form_content":"修改表單內容","btn_get_pick_up_serial_number":"領取取票序號","btn_pick_up_ibon":"領取 ibon 票券","btn_pick_up_qrcode":"領取電子票券","btn_save_form_content":"儲存表單內容","cancel_order":"取消訂單","can_modify_before_the_time":"報名資料修改期限： {{time}}","cannot_modify":"報名資料已無法修改，如有相關問題請逕洽主辦單位。","check_out":"結帳","choose_hidden_only_host_can_see_you_attend":"勾選後，可以讓別人從活動頁或您的個人頁面上得知您參加了這個活動。","choose_payment_methods":"選擇付款方式","choose_ticket_type":"選擇票種","confirm_form_data":"確認表單資料","confirm_order_and_pay":"確認訂單並繳費","confirm_order":"確認訂單","contact_organization":"聯絡主辦單位","coupon":"使用優惠券（只能使用一張）","credit_card":"信用卡","credit_card_asiapay":"信用卡(AsiaPay)","credit_card_asiapay_desc":"AsiaPay 為香港金流服務商，以港幣收款。若您使用台灣發行的信用卡，可能會有額外的跨國手續費。","credit_card_no":"信用卡卡號","credit_card_holder_name":"持卡人姓名","desc_chosen_qrcode":"請妥善保存您的電子票券(QRCode)。您可以下載 KKTIX App，更簡單管理。","desc_pick_up_ibon":"需在 {{duedate}} 前領取完成","desc_pick_up_qrcode":"活動結束前皆可領取","display_registration_info":"顯示報名資訊","famiport":"全家 FamiPort 代碼繳費","famiport_pin_code":"繳費代碼","famiport_help_url":"http://support.kktix.com/knowledgebase/articles/451021","famiport_help_label":"繳費步驟說明","fill_in_forms":"填寫表單","form_content":"表單內容","help_desc":"第一次使用？","hide_registration_info":"隱藏報名資訊","ibon_input_desc":"請輸入您的 {{idCardNumber}}，外籍人士請輸入 {{passportNumber}}","ibon_pick_up_how_to_url":"http://support.kktix.com/knowledgebase/articles/358803","ibon_pick_up_notice":"您需要在 ibon 取票時輸入 {{idCardNumber}} 和 {{pickUpSerialNumber}} ，並支付新台幣 {{charging}} 元手續費。取票需在 {{duedate}} 前完成。","id_card_number":"身分證字號","patron_address":"地址","important_desc_pick_up_ibon":"* 取票時需付新台幣 $30 手續費 *","invalid_id_format_warning":"身分證字號或護照號碼格式不符，限阿拉伯數字與英文字母，長度 6 - 10 個字","kktix_member_please_login":"KKTIX會員請登入","login_or_signup":"登入或加入會員","month_and_year":"月份/年份","order_cancelled":"您的訂單已取消。","order_cancelled_refund_please_contact_organization":"您的訂單已取消。如果需要退款，請與主辦單位聯絡退款事宜。","order_cancelled_refund_please_contact_kktix":"您的訂單已取消。如果需要退款，請與 KKTIX 聯絡退款事宜。","order_confirmed_message":"您的訂單已成立，我們會寄出訂單與活動通知到您的聯絡信箱。","order_confirmed_we_will_send_to_your_contact_mail_please":"您的訂單已成立，我們會寄出訂單到您的聯絡信箱。請在","order_content":"訂單內容","order_info":"訂單資訊","order_no":"訂單編號","order_paid":"您的訂單已完成繳費。","order_payment_hint_post":"前完成繳費。若逾期未繳款，系統將取消您的訂單。","order_payment_hint_pre":"您的訂單已保留，請在","paid_at":"付款完成時間","passport_number":"護照號碼","pay":"刷卡","pay_before":"前完成繳費。","pay_amount":"繳費金額","pay_for_ticket":"繳費","pay_and_pickup":"取票繳費","pay_via_credit_card":"付款方式：信用卡","pay_via_credit_card_asiapay":"付款方式：信用卡(AsiaPay)","payment_method":"付款方式","payment_method_atm":"付款方式：ATM 虛擬帳號","payment_method_famiport":"付款方式：全家 FamiPort 代碼繳費","pick_up_helper":"瞭解票券類型","pick_up_method_alert":"一旦選擇無法更改，是否確定？","pick_up_serial_number":"取票序號","pick_up_step_link":"詳細取票步驟","pick_up_ticket":"完成","please_enter_contact_info":"請輸入聯絡人資訊","please_enter_ticket_data":"請輸入票券資料","print_registrations_data":"列印報名資料","rechoose_payment_methods":"重選付款方式","rechoose_ticket":"重新購票","rechoose_ticket_dialog":"目前的訂單將先行取消，座位亦不保留，您確定要重新選票嗎？","cancel_ticket":"取消購票","remind_cannot_notify":"提醒您：本活動在報名/購票後，將無法修改表單資料，請多加確認資料正確性","remind_deadline":"本活動在報名/購票後，可於 {{time}} 前修改報名資料","registration_complete":"完成","registration_info_display":"報名資訊：顯示","registration_info_hidden":"報名資訊：隱藏","registration_timeout_reminder":"您的訂單已保留，請在 {{minutes}} 內完成填寫資料並確認訂單。若超過時限，系統將自動取消。","reserved_ticket_outdated":"保留的票券已經失效，請","selector_title":"請選擇票券類型","share_event_to_social_network":"分享活動頁面到社群網路","show_your_attendance_on_public_page":"在公開頁面顯示您參加了本活動","speed_up_registration":"可以加速報名流程，並協助您管理票券。","state_not_paid":"（待繳費）","this_virtual_account_only_applies_to_you_do_not_transfer_twice":"本虛擬帳號僅對應到您的報名資料，請勿重複轉入到同一帳號","three_digit_on_the_back_of_card":"卡片背面末 3 碼","ticket_type":"票種","discount":"折扣","ticket_id":"票號：#","ticket_type_how_to_url":"http://support.kktix.com/knowledgebase/articles/355264","ticket_unit":"張數","title_contact_info":"聯絡人資料","title_pick_up":"票券類型：","title_pick_up_ibon":"ibon 紙本","title_pick_up_qrcode":"電子票券","total_amount":"總金額","transaction_processing":"交易進行中","transaction_processing_notice":"請勿關閉頁面或進行其他操作","updating_status":"狀態更新中","valid_within":"有效期限","validation_code":"驗證碼","user_cant_cancel_order_msg":"此活動無法自行取消訂單。如需取消，請洽主辦單位","seat":"座位","tickets":"票券","seat_styles":{"reserved_seating":"自行選位","auto_seating":"電腦配位","standing_zone":"全區站席","free_seating":"自由入座"},"discontinuous":"不連位","section_register_status":{"comming_soon":"尚未開賣","sold_out":"已售完","in_stock":"熱賣中"}},"side_block":{"btn_contact_manager":"聯絡 KKTIX 客服","btn_contact_organization":"聯絡主辦單位","desc_contact_manager":"系統相關問題，請","desc_contact_organization":"活動相關問題，請","general_refund_info":"請參考活動細節頁面","general_refund_info_link_subject":"或洽主辦單位確認","kktix_manager_link":"http://support.kktix.com","kktix_refund_info":"本活動委託 KKTIX 代為處理退票退款事宜。詳情請見","kktix_refund_info_link":"http://support.kktix.com/knowledgebase/articles/356418","kktix_refund_info_link_subject":"《KKTIX 退換票辦法》","title_refund_notice":"購票注意事項","title_sharing_event":"分享活動"},"payments":{"CREDITCARD":"信用卡","PAYPAL":"PayPal","ATM":"ATM 虛擬帳號","FAMIPORT":"全家 FamiPort 代碼繳費","CREDITCARD_ASIAPAY":"信用卡(AsiaPay)","CASH":"現金","FAMIPORTSTATION":"全家 FamiPort 超商購票","ORGANIZER":"主辦調票","FREE_ORDER":"0元訂單","COMPLIMENTARY":"免繳費","can_not_pay_by_atm":"無法使用 ATM 付款","can_not_pay_by_famiport":"無法使用全家 FamiPort 代碼繳費","can_not_pay_by_creditcard":"無法使用信用卡付款","can_not_pay_by_paypal":"無法使用 PayPal 付款","can_not_pay_by_ezpay_3d":"無法使用信用卡 3D 驗證付款","order_is_not_purchasable":"訂單目前無法付款","not_supported_creditcard":"本活動不支援信用卡","card_num_match_failed":"卡號不符合購票資格"},"pickup":{"compelete_msg_title_true":"恭喜！您已完成訂單","compelete_msg_title_false":"尚未繳費完成","compelete_msg_content_true":"訂單已成立，我們會寄出訂單與活動通知到您的聯絡信箱。","compelete_msg_content_false":"訂單已完成，請儘速完成繳費程序。","finish_pickup_msg_title":"恭喜！您已完成訂單","finish_pickup_msg_content":"建議將活動加入行事曆，以免錯過精采活動喔！","disable_reason":"超過取票期限 {{date}}","famiport_max_4":"全家取票方式最多 4 張票券","qrcode":"電子票券","booth":"現場取票","mailing":"郵寄","famiport":"台灣 FamiPort 取票","ibon":"ibon 取票","retailer":"端點","fee":"取票手續費","tips":{"qrcode":"我們提供 iOS / Android App","order_fee":"訂單需加收 {{fee}} 手續費。","table_fee":"取票時額外付 {{fee}} 給櫃檯。","pickup_step":"詳細取票步驟","mailing":"郵寄約 5~7 個工作天寄出。僅限台灣地址。","mailing_hk":"郵寄約 5~7 個工作天寄出。僅限香港地址。"},"form":{"patron_info":"收貨人資訊：","name":"姓名","mobile":"手機","tel":"市話","city":"縣市","dist":"地區","zip":"郵遞區號","address":"地址"},"join_with":"、","invalid_pickup_type":"無效的取票方式"},"pickup_notice":{"refund":"台灣地區活動若需退換票券且符合退換票條件，相關方式請參考\u003ca href=\"http://support.kktix.com/knowledgebase/articles/356418\"\u003e退換票說明\u003c/a\u003e。香港地區活動恕不接受退票。","sub_content":{"qrcode":"您選擇的取票方式為電子票券，請下載 KKTIX iOS/Android App 取得電子票券。您也可以列印本訂單，現場出示訂單上的 QRCode 電子票券入場。若有任何存取問題，敬請務必來信或來電確認。","famiport":"您選擇的取票方式為 \u003cstrong class=\"text-danger\"\u003eFamiPort 取票\u003c/strong\u003e，敬請於節目開演前攜帶\u003cstrong class=\"text-danger\"\u003e「身份證字號」\u003c/strong\u003e及\u003cstrong class=\"text-danger\"\u003e「取票號碼」\u003c/strong\u003e至 FamiPort 取票，取票時額外付 TWD$30 給櫃檯。","ibon":"您選擇的取票方式為 \u003cstrong class=\"text-danger\"\u003eibon 取票\u003c/strong\u003e，敬請於節目開演前攜帶\u003cstrong class=\"text-danger\"\u003e「身份證字號」\u003c/strong\u003e及\u003cstrong class=\"text-danger\"\u003e「取票號碼」\u003c/strong\u003e至 ibon 取票，取票時額外付 TWD$30 給櫃檯。","mailing":"您的票券應該於 \u003cstrong class=\"text-danger\"\u003e5 至 7 個工作天內\u003c/strong\u003e寄出，若 10 個工作天內尚未收到票券，請務必來信或來電確認。","booth":"\u003cp\u003e您選擇的取票方式為 \u003cstrong class=\"text-danger\"\u003e現場取票\u003c/strong\u003e，敬請於當日節目現場憑\u003cstrong class=\"text-danger\"\u003e「身份證」\u003c/strong\u003e及\u003cstrong class=\"text-danger\"\u003e「訂單編號」\u003c/strong\u003e至現場取票。\u003c/p\u003e\n\u003cp\u003e若您因故無法自行領取，請將您的\u003cstrong class=\"text-danger\"\u003e「身份證」\u003c/strong\u003e及\u003cstrong class=\"text-danger\"\u003e「訂單編號」\u003c/strong\u003e交給代領人，並請代領人攜帶代領人身份證以供查驗。\u003c/p\u003e\n"},"general":"\u003cp\u003e容我們提醒您：\u003c/p\u003e\n\u003col\u003e\n  {{extra_notices}}\n  \u003cli\u003e持優待票者，請憑此票券及相關證件入場。\u003c/li\u003e\n  \u003cli\u003e本公司僅為委託代售票務單位，關於活動內容、品質、相關權益異動等事宜，一概與本公司無涉，請持票人洽詢主辦單位，並請依照主辦單位所發出之通知與規定辦理。\u003c/li\u003e\n  \u003cli\u003e因主辦單位及演出場館各有所不同，皆有其需注意事項，未盡事宜請遵照各單位相關規定遵守辦理。\u003c/li\u003e\n  \u003cli\u003e部分節目因演出需要並無再入場機會，如因遲到或中途離席而無法入場，不得以此要求退票或補票。\u003c/li\u003e\n  \u003cli\u003e部分規則因營運地區而有所不同，請參考: \u003ca href=\"http://support.kktix.com/knowledgebase/articles/1875196\"\u003e台灣規範\u003c/a\u003e \u003ca href=\"http://support.kktix.com/knowledgebase/articles/1875208\"\u003e香港規範\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n","mailing":"","famiport":"\u003cli\u003e當您完成所有交易流程並選擇前往全家 FamiPort 取票，本系統已視為票券售出，如因逾期未前往取票，恕無法接受尚未取票而必須提供取票、取消交易或退換票等服務。\u003c/li\u003e","ibon":"\u003cli\u003e當您完成所有交易流程並選擇前往 ibon 取票，本系統已視為票券售出，如因逾期未前往取票，恕無法接受尚未取票而必須提供取票、取消交易或退換票等服務。\u003c/li\u003e","booth":"\u003cli\u003e節目開演前取票人潮眾多，建議您\u003cstrong class=\"text-danger\"\u003e至少提前一小時\u003c/strong\u003e取票，以免影響您的入場時間。若現場因取票流量過大導致您的權益受損，您不能據此主張退費或拒不付費。\u003c/li\u003e","qrcode":"\u003cli\u003e每張電子票券限一人及該場次使用一次，無法重複使用。\u003c/li\u003e\n\u003cli\u003e本電子票券視同無記名有價證券，請持票人善盡保管之責，並請注意任何憑證皆無法取代電子票券本身，恕無法持任何憑證要求入場。補發電子票券或是退票皆需酌收手續費，詳情請洽 \u003ca href=\"mailto:support@kktix.com\"\u003esupport@kktix.com\u003c/a\u003e。\u003c/li\u003e\n","retailer":""},"business_number":"統一編號","love_code":"愛心碼","mobile_carrier":"手機載具","digital_receipt":"電子發票","buyer_person":"個人","buyer_company":"公司行號或機關團體","carrier_kktix":"KKTIX會員載具","carrier_donate":"捐贈","receipt_issuing":"發票開立中","no_data":"無資料","receipt_title":"發票抬頭","receipt_info":"發票資訊","digital_receipt_no":"電子發票號碼","receipt_state":"狀態","receipt_voided":"已作廢","receipt_order":"訂單","receipt_issue_time":"開立時間","receipt_buyer_id":"買受人統一編號","item_name":"品名","item_unit_price":"單價","item_quantity":"數量","item_subtotal_amount":"金額","item_total_amount":"總計","mobile_barcode_note":"此為與財政部電子發票平台申請的條碼，請勿填寫手機號碼","apply_e_receipt":"申請手機載具條碼","mobile_barcode_format_error":"手機條碼格式錯誤","tickets":{"action_billing_immediately":"即刻升級","action_bind_kkbox_account":"連結 KKBOX 帳號","action_sign_in":"登入或加入會員","billing_to_be_kkbox_vip":"本票券只有 KKBOX {{restriction}}可以購買，{{action}}","bought":"已達購票上限","cancel":"取消","choose_ticket_type":"選擇票種","ended":"結束販售","free":"免費","ineligible":"無資格","ineligible_reason":"本票券只有 KKBOX {{restriction}}可以購買（您目前連結了 KKBOX {{identity}}）","invitation_code":"邀請碼","need_invitation_code":"需要輸入邀請碼購買","kkbox_account":"帳號","kkbox_user":"會員","kkbox_user_limit_exists":"您已經購買了 {{purchased}} 張票券，本票券每人限購 {{limit}} 張。","kkbox_vip_account":"白金會員帳號","kkbox_vip_user":"白金會員","kkbox_prime_user":"Prime 會員","kktix_user":"KKTIX 會員","not_started":"尚未開賣","require_kkbox":"本票券只有 KKBOX {{restriction}}可以購買，請先 {{action}}","require_kktix":"本票券只有 {{restriction}} 可以購買，請先 {{action}}","sale_time_end_at":"結束販售時間","sold_out":"已售完","ticket_least_to_buy":"最少需購買 {{unit}} 張","tickets_left_angular":"剩 {{amount}} 張票","tickets_left":"剩%{count}張票","ticket_price":"票價","ticket_type":"票種","ticket_unit_notice":"購買張數需為 {{unit}} 的倍數","temporarily_unavailable":"暫無票券","temporarily_unavailable_desc":"如果其他用戶沒有完成報名/購票流程，票券會被釋出","booking_fee":"平台服務費","booking_fee_description_1":"本活動","booking_fee_description_2":"依據票價酌收平台服務費，請參考說明"}}
+      }
+    </script>
+
+    <script src="//www.google.com/recaptcha/api.js?hl=zh-TW&amp;render=explicit"></script>
+    <script src="https://t.kfs.io/assets/require-091192754c41878ba197374fa91d12d3.js"></script>
+
+<script>
+require.config({"baseUrl":"https://t.kfs.io/assets","shim":{"lib/angular-mod/kktix-datetime-picker":{"deps":["vendor/bootstrap-datepicker","jquery.timepicker.min"]},"jquery.cycle2.scrollVert.min":{"deps":["jquery.cycle2.min"]}},"waitSeconds":0,"paths":{"events":"https://t.kfs.io/assets/events-e546a674358a047c2bb85cb384c6987a","dashboard/overview":"https://t.kfs.io/assets/dashboard/overview-f171d13ae283833c4fee45e214bd7af2","registrations/new":"https://t.kfs.io/assets/registrations/new-069d7e64061a0e8d3876bfe0fe8bccd9","registrations/show":"https://t.kfs.io/assets/registrations/show-2c08d9518ae43ce4b507aa79553fabc4","widgets/show":"https://t.kfs.io/assets/widgets/show-4c7faf3e9acb73f8a1e44990bd9bc9f9","dashboard/organization_events/new":"https://t.kfs.io/assets/dashboard/organization_events/new-d37c8f8d3fe226271a588e74b3af4a4f","dashboard/event_tickets/index":"https://t.kfs.io/assets/dashboard/event_tickets/index-1e25a87e4323652069349ba44d455088"}}); require(["registrations/new"]);
+</script>
+
+<script>
+  // Concact params for language
+  var concatUrl = function(){
+    $('.language > a').each(function(i, ele){
+      $ele = $(ele);
+      var localeParam = $ele.attr('href');
+      var rawUrl = location.pathname;
+      var urlParams = location.search.split('?')[1]
+      var paramsMap = {};
+      if (!!urlParams && urlParams.length > 0) {
+        var paramsAry = urlParams.split('&')
+        paramsAry.forEach(function(p, idx){
+          s = p.split('=');
+          paramsMap[s[0]] = s[1];
+        });
+      }
+      langAry = localeParam.split('=');
+      if (/en|ja|zh-TW/.test(langAry[1])) {
+        paramsMap['locale'] = langAry[1];
+      }
+      var newSearchStr = (_(paramsMap).map(function(value, key){ return key + '=' + value; })).join('&');
+      $ele.prop("href", rawUrl + '?' + newSearchStr);
+    })
+  };
+  concatUrl();
+</script>
+
+
+
+    </body>
+</html>
